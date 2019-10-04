@@ -177,7 +177,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link active">
+            <a href="index.html" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p style="margin-left: 8px;">
                 Painel
@@ -225,7 +225,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="users.html" class="nav-link">
+            <a href="/admin/users" class="nav-link active">
               <i class="fas far fa-user" style="margin-left: 4px;"></i>
               <p style="margin-left: 18px;">
                Usuários
@@ -254,13 +254,8 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Painel</li>
-            </ol>
+            <h1 class="m-0 text-dark">Usuários</h1>
+            <a class="btn btn-danger" href="new-user.html">Adicionar Novo</a><br>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -269,7 +264,42 @@
 
     <!-- Main content -->
     <section class="content">
-      
+        <div class="row">
+            <div class="col-md-12">
+              <div class="box box-primary">     
+                    <div class="box-body no-padding">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th style="width: 10px">#</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Login</th>
+                            <th style="width: 60px">Admin</th>
+                            <th style="width: 140px">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {loop="$users"}
+                          <tr>
+                            <td>{$value.iduser}</td>
+                            <td>{$value.desperson}</td>
+                            <td>{$value.desemail}</td>
+                            <td>{$value.deslogin}</td/>
+                            <td>{if="$value.inadmin == 1"}Sim{else}Não{/if}</td>
+                            <td>
+                              <a href="/admin/users/{$value.iduser}" class="btn btn-primary btn-sm" style="margin-bottom: 5px;"><i class="fa fa-edit"></i> Editar</a>
+                              <a href="/admin/users/{$value.iduser}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Excluir</a>
+                            </td>
+                          </tr>
+                          {/loop}
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+            </div>
+          </div>
     </section>
     <!-- /.content -->
   </div>

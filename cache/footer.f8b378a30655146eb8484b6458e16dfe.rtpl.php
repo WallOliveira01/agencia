@@ -1,4 +1,4 @@
-<!-- Newsletter Section Start -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Newsletter Section Start -->
     <section class="newsletter">
         <div class="container-fluid">
             <div class="row js-inview">

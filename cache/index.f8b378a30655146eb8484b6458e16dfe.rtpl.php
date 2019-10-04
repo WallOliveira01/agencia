@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
-<head>
-    <!-- Metas -->
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    
-    <!-- Title  -->
-    <title>Manson - Creative Agency Template</title>
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <!-- Style Css -->
-    <link rel="stylesheet" href="styles/vendor.css">
-    <link rel="stylesheet" href="revolution/css/revolution.all.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/revolution.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-   
-   
-    <!-- Modernizr -->
-    <script src="scripts/vendor/modernizr.js"></script>
-</head>
-
-<body>
-    <!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     
      <!-- Start  Loading Mask-->
     <div id="mask">
@@ -57,18 +29,17 @@
             <div class="col-12">
                 <div class="row justify-content-between">
                     <div class="col-auto">
-                        <a class="navbar-brand" href="index.html"><img src="images/demo/logos/logo-slider-black.png" alt=""></a>
+                        <a class="navbar-brand" href="/index"><img src="../res/site/images/demo/logos/logo-slider-black.png" alt=""></a>
                     </div>
                     <div class="col">
                         <ul class="navbar float-right">
-                            <li><a class="nav-link active" href="index.html">Home</a></li>
-                            <li><a class="nav-link " href="sobre.html">Sobre</a></li>
-                            <li><a class="nav-link " href="servicos.html">Serviços</a></li>
-                            <li class="nav-item dropdown" ><a class="nav-link"  href="portfolio.html" aria-haspopup="true" aria-expanded="false">Trabalhos</a>
+                            <li><a class="nav-link" href="/index">Home</a></li>
+                            <li><a class="nav-link " href="/sobre">Sobre</a></li>
+                            <li><a class="nav-link " href="/servicos">Serviços</a></li>
+                            <li class="nav-item dropdown" ><a class="nav-link"  href="/portfolio" aria-haspopup="true" aria-expanded="false">Trabalhos</a>
                             </li>
-                            <li><a class="nav-link" href="time.html">Time</a></li>
-                            <li><a class="nav-link" href="contato.html">Contato</a></li>
-                           
+                            <li><a class="nav-link" href="time">Time</a></li>
+                            <li class=" active"><a class="nav-link" href="/contato">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,14 +62,14 @@
 
               <!-- navbar links -->
               <div class="collapse navbarmob" id="navbarOppener">
-                 <span class="icon-close"><img src="images/close.png" alt="close"/></span>
-                <ul class="navbar-nav ml-auto">
-                    <li><a class="nav-link active" href="index.html">Home</a></li>
-                    <li><a class="nav-link " href="sobre.html">Sobre</a></li>
-                    <li><a class="nav-link " href="servicos.html">Serviços</a></li>
-                    <li><a class="nav-link" href="portfolio.html">Trabalhos</a></li>
-                    <li><a class="nav-link" href="time.html">Time</a></li>
-                    <li><a class="nav-link" href="contato.html">Contato</a></li>
+                 <span class="icon-close"><img src="../res/site/images/close.png" alt="close"/></span>
+                 <ul class="navbar-nav ml-auto">
+                    <li><a class="nav-link active" href="/index">Home</a></li>
+                    <li><a class="nav-link " href="/sobre">Sobre</a></li>
+                    <li><a class="nav-link " href="/servicos">Serviços</a></li>
+                    <li><a class="nav-link" href="/portfolio">Trabalhos</a></li>
+                    <li><a class="nav-link" href="/time">Time</a></li>
+                    <li><a class="nav-link" href="/contato">Contato</a></li>
                 </ul>
             </div>
             </div>
@@ -112,8 +83,8 @@
         <div id="slider1" class="rev_slider"  data-version="5.0">
             <ul>
                     
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/demo/slider-design/sliderbg.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/demo/slider-design/sliderbg.jpg"> 
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="../res/site/images/demo/slider-design/sliderbg.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="../res/site/images/demo/slider-design/sliderbg.jpg"> 
                         
                         <div class="tp-caption" 
                         data-paddingbottom="[0,0,0,0]"
@@ -170,7 +141,7 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <div class="btns-box">
-                                <a href="about.html" class="theme-btn btn-style-one">SAIBA MAIS</a>
+                                <a href="/sobre" class="theme-btn btn-style-one">SAIBA MAIS</a>
                             </div>
                         </div>
                         
@@ -189,13 +160,13 @@
                         data-x="['right','right','right','center']"
                         data-y="['middle','top','top','middle']"
                         data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <figure class="content-image"><img src="images/demo/slider-design/01.png" alt=""></figure>
+                            <figure class="content-image"><img src="../res/site/images/demo/slider-design/01.png" alt=""></figure>
                         </div>
                     
                     </li>
                     
-                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/demo/slider-design/sliderbg.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/demo/slider-design/sliderbg.jpg"> 
+                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="../res/site/images/demo/slider-design/sliderbg.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="../res/site/images/demo/slider-design/sliderbg.jpg"> 
                     
                         <div class="tp-caption" 
                         data-paddingbottom="[0,0,0,0]"
@@ -252,7 +223,7 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <div class="btns-box">
-                                <a href="about.html" class="theme-btn btn-style-one">SAIBA MAIS</a>
+                                <a href="/sobre" class="theme-btn btn-style-one">SAIBA MAIS</a>
                             </div>
                         </div>
                         
@@ -271,8 +242,8 @@
                         data-x="['right','right','right','center']"
                         data-y="['middle','middle','top','middle']"
                         data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                            <figure class="content-image"><img src="images/demo/slider-design/02.png" alt=""></figure>
-                        </div>
+                            <figure class="content-image"><img src="../res/site/images/demo/slider-design/02.png" alt=""></figure>
+                        </div>../res/site/images/demo/slider-design/02.png
                     
                     </li>
                     
@@ -305,7 +276,7 @@ em vídeos criativos & soluções digitais.</h2>
                         <div class="contentslide" >
                             <div class="sliderslide col-4 js-inview_h tra20 delay01">
                                 <div class="sliderslide-content">
-                                <img src="images/svg/Office-47.svg" class="svg" alt="Graphic Design" />
+                                <img src="../res/site/images/svg/Office-47.svg" class="svg" alt="Graphic Design" />
                                     <h4 class="small">Design Gráfico</h4>
                                     <div class="voffset-30"></div>
                                     <ul class="list-services">
@@ -318,7 +289,7 @@ em vídeos criativos & soluções digitais.</h2>
                             </div>
                             <div class="sliderslide col-4 js-inview_h tra20 delay02">
                                 <div class="sliderslide-content">
-                                <img src="images/svg/Userinterface_image.svg" class="svg"  alt="Digital Marketing"/>
+                                <img src="../res/site/images/svg/Userinterface_image.svg" class="svg"  alt="Digital Marketing"/>
                                     <h4 class="small">Marketing Digital</h4>
                                     <div class="voffset-30"></div>
                                     <ul class="list-services">
@@ -331,7 +302,7 @@ em vídeos criativos & soluções digitais.</h2>
                             </div>
                             <div class="sliderslide col-4 js-inview_h tra20 delay03">
                                 <div class="sliderslide-content">
-                                <img src="images/svg/Userinterface_slider.svg" class="svg" alt="Web Design"/>
+                                <img src="../res/site/images/svg/Userinterface_slider.svg" class="svg" alt="Web Design"/>
                                     <h4 class="small">Web Design</h4>
                                     <div class="voffset-30"></div>
                                     <ul class="list-services">
@@ -344,7 +315,7 @@ em vídeos criativos & soluções digitais.</h2>
                             </div>
                             <div class="sliderslide col-4 js-inview_h tra20 delay04">
                                 <div class="sliderslide-content">
-                                <img src="images/svg/luxury.svg" class="svg" alt="Graphic Design" />
+                                <img src="../res/site/images/svg/luxury.svg" class="svg" alt="Graphic Design" />
                                     <h4 class="small">Midia Impressa</h4>
                                     <div class="voffset-30"></div>
                                     <ul class="list-services">
@@ -357,7 +328,7 @@ em vídeos criativos & soluções digitais.</h2>
                             </div>
                             <div class="sliderslide col-4 js-inview_h tra20 delay05">
                                 <div class="sliderslide-content">
-                                <img src="images/svg/device.svg" class="svg"  alt="Digital Marketing"/>
+                                <img src="../res/site/images/svg/device.svg" class="svg"  alt="Digital Marketing"/>
                                     <h4 class="small">Pós Produção</h4>
                                     <div class="voffset-30"></div>
                                     <ul class="list-services">
@@ -370,7 +341,7 @@ em vídeos criativos & soluções digitais.</h2>
                             </div>
                             <div class="sliderslide col-4 js-inview_h tra20 delay06">
                                 <div class="sliderslide-content">
-                                <img src="images/svg/3d.svg" class="svg" alt="Web Design"/>
+                                <img src="../res/site/images/svg/3d.svg" class="svg" alt="Web Design"/>
                                     <h4 class="small">Análise 3D</h4>
                                     <div class="voffset-30"></div>
                                     <ul class="list-services">
@@ -388,56 +359,3 @@ em vídeos criativos & soluções digitais.</h2>
             </div>
         </div>
     </div>
-<!-- Services Section Start -->
-
-<!-- Newsletter Section Start -->
-    <section class="newsletter">
-        <div class="container-fluid">
-            <div class="row js-inview">
-                <div class="col-12">
-                    <div class="voffset-100"></div>
-                    <h3 class="js-inview_h tra20 delay01">Fique <span>Conectado</span></h3>
-                    <p class="js-inview_h tra20 delay02">Assine a nossa newsletter e fique atualizado sobre as últimas
-                        <br>histórias de design, novos projetos e portfólio.</p>
-                    <div class="voffset-40"></div>
-                    <form action="/" class="newsletter-form js-inview_h tra20 delay03">
-                        <input type="text" placeholder="Insira seu email" class="input-icon icon-newsletter">
-                        <input type="submit" value="Inscreva-Se" class="input-icon icon-send">
-                    </form>
-                    <div class="voffset-100"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Newsletter Section End -->
-<!-- Footer Section Start -->
-    <footer class="footer-site">
-        <div class="container">
-            <ul class="footer__menu footer__menu_left footer__menu_separators">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Trabalho</a></li>
-                <li><a href="#">Time</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-            <span class="copyright">&copy; 2019 Por <a href="#" target="_blank">Wallace Oliveira</a></span>
-        </div>
-    </footer>
-<!-- Footer Section End -->
-
-    
-
-    <!-- Vendor -->
-    <script src="scripts/vendor.js"></script>
-    
-    <!-- Revolution Slider -->
-    <script src="revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
-    <script src="revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-    <script src="revolution/js/extensions/revolution.extensions.all.js"></script>
-
-    <!-- Custom scripts -->
-    <script src="scripts/plugins.js"></script>
-    <script src="scripts/main.js"></script>
-</body>
-
-</html>

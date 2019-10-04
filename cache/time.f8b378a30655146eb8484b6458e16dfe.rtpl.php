@@ -1,0 +1,146 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    
+    <!-- Title  -->
+    <title>Manson - Creative Agency Template</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Style Css -->
+    <link rel="stylesheet" href="../res/site/styles/vendor.css">
+    <link rel="stylesheet" href="../res/site/revolution/css/revolution.all.css">
+    <link rel="stylesheet" href="../res/site/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+   
+   
+    <!-- Modernizr -->
+    <script src="scripts/vendor/modernizr.js"></script>
+</head>
+
+<body>
+    <!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    
+     <!-- Start  Loading Mask-->
+    <div id="mask">
+        <div class="material-icon">
+            <div class="spinner">
+                <div class="right-side">
+                    <div class="bar"></div>
+                </div>
+                <div class="left-side">
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="spinner color-2">
+                <div class="right-side">
+                    <div class="bar"></div>
+                </div>
+                <div class="left-side">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- End Loading Mask-->
+
+     <header class="container header js-header-fixsmall overlayer-fixed">
+      <!-- Start Navbar-->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row justify-content-between">
+                    <div class="col-auto">
+                        <a class="navbar-brand" href="/"><img src="../res/site/images/demo/logos/logo-slider-black.png" alt=""></a>
+                    </div>
+                    <div class="col">
+                        <ul class="navbar float-right">
+                            <li><a class="nav-link" href="/">Home</a></li>
+                            <li><a class="nav-link " href="/sobre">Sobre</a></li>
+                            <li><a class="nav-link " href="/servicos">Serviços</a></li>
+                            <li class="nav-item dropdown" ><a class="nav-link"  href="/portfolio" aria-haspopup="true" aria-expanded="false">Trabalhos</a>
+                            </li>
+                            <li><a class="nav-link" href="/time">Time</a></li>
+                            <li class=" active"><a class="nav-link" href="/contato">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- End Navbar-->
+         <!-- Start Navbar Mobile-->
+        <nav class="navbarmob navbar-expand-lg">
+            <div class="container">
+
+              <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar">
+                    <span class="menu-lines">
+                        <span class="menu-line menu-line-1"></span>
+                        <span class="menu-line menu-line-2"></span>
+                        <span class="menu-line menu-line-3"></span>
+                    </span>
+                </span>
+              </button>
+
+              <!-- navbar links -->
+              <div class="collapse navbarmob" id="navbarOppener">
+                 <span class="icon-close"><img src="../res/site/images/close.png" alt="close"/></span>
+                <ul class="navbar-nav ml-auto">
+                 <li><a class="nav-link active" href="/">Home</a></li>
+                    <li><a class="nav-link " href="/sobre">Sobre</a></li>
+                    <li><a class="nav-link " href="/servicos">Serviços</a></li>
+                    <li><a class="nav-link" href="/portfolio">Trabalhos</a></li>
+                    <li><a class="nav-link" href="/time">Time</a></li>
+                    <li><a class="nav-link" href="/contato">Contato</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </header>
+    <!-- Team Section Start -->
+    <section id="section-team" class="out-team">
+        <div class="container">
+            <div class="row justify-content-center js-inview">
+                <div class="col-12">
+                    <div class="voffset-240"></div>
+                     <div class="section__header">
+                        <h2 class="section__title js-inview_h tra20 delay01">Meet the Team </h2>
+                        <span>As a digital designer, a well-organized portfolio showing off your design skills, range, and<br/> interests will be a backbone in your search for clients.</span>
+                        <!--<div class="section__header-right js-inview_h tra20 delay02">
+                            <h2>We help you</h2>
+                            <p>Changing the digital world</p>
+                        </div>-->
+                    </div>
+                    <div class="voffset-120"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 js-inview">
+                    <div class="team__slider" data-flickity='{ "cellAlign": "center", "wrapAround": true, "prevNextButtons": false }'>
+                        <?php $counter1=-1;  if( isset($users) && ( is_array($users) || $users instanceof Traversable ) && sizeof($users) ) foreach( $users as $key1 => $value1 ){ $counter1++; ?>
+                        <div class="team__item js-inview_h tra20 delay01">
+                            <div class="team__item__content"><img src="../res/site/images/time/wallaceoliveira.jpg" alt="">
+                                <p class="team__name"><?php echo htmlspecialchars( $value1["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+                                <p class="team__role">Desenvolvedor Web & Editor</p>
+                                <ul class="team__item__social">
+                                    <li><a href="https://www.facebook.com/lucas.varjao.5"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                                    <li><a href="https://www.instagram.com/lucasvarjaoreporter" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <div class="voffset-220"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Team Section End -->

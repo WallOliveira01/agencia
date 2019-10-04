@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Produtora | Painel</title>
+  <title>Produtora | Novo Usuário</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -177,7 +177,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link active">
+            <a href="index.html" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p style="margin-left: 8px;">
                 Painel
@@ -225,7 +225,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="users.html" class="nav-link">
+            <a href="users.html" class="nav-link active">
               <i class="fas far fa-user" style="margin-left: 4px;"></i>
               <p style="margin-left: 18px;">
                Usuários
@@ -254,23 +254,49 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Painel</li>
-            </ol>
+            <h1 class="m-0 text-dark">Usuários</h1>
+            <a class="btn btn-danger" href="new-user.html">Adicionar Novo</a><br>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+  </div>
     <!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content">
-      
-    </section>
+        <div class="card card-danger">
+            <form id="formNewUser"  role="form" action="/admin/users/create" method="post">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="lblEmail">Endereço de Email</label>
+                  <input type="email" class="form-control" id="desemail" name="desemail" placeholder="Insira o email">
+                </div>
+                <div class="form-group">
+                  <label for="lblNome">Nome</label>
+                  <input type="text" class="form-control" id="desperson" name="desperson" placeholder="Usuário">
+                </div>
+                <div class="form-group">
+                    <label for="lblLogin">Login</label>
+                    <input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="Login">
+                  </div>
+                <div class="form-group">
+                  <label for="lblPassword">Senha</label>
+                  <input type="password" class="form-control" id="despassword" name="despassword" placeholder="Senha">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="inadmin" value="1">
+                  <label class="form-check-label">Administrador</label>
+                </div>
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-danger" name="btnEnviar">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+      </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
