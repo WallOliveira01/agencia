@@ -23,10 +23,10 @@
         <div class="container">
             <ul class="footer__menu footer__menu_left footer__menu_separators">
                 <li><a href="/">Home</a></li>
-                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/about">Sobre</a></li>
                 <li><a href="/portfolio">Trabalho</a></li>
-                <li><a href="/time">Time</a></li>
-                <li><a href="contato">Contato</a></li>
+                <li><a href="/team">Time</a></li>
+                <li><a href="/contact">Contato</a></li>
             </ul>
             <span class="copyright">&copy; 2019 - Connect Films - Desenvolvido Por <a href="https://walloliveira.com.br" target="_blank">Wallace Oliveira</a></span>
         </div>

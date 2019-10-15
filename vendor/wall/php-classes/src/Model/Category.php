@@ -14,7 +14,7 @@ class Category extends Model{
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_categories ORDER BY descategory");
+		return $sql->select("SELECT * FROM tb_categories ORDER BY idcategory");
 
     }
     
@@ -27,7 +27,9 @@ class Category extends Model{
 			":descategory"=>$this->getdescategory()
 		));
 
-		$this->setData($results[0]);
+        $this->setData($results[0]);
+        
+        Category::updateFile();
 
     }
 
@@ -47,7 +49,24 @@ class Category extends Model{
         $sql->query("DELETE FROM tb_categories WHERE idcategory = :idcategory", [
             ':idcategory'=>$this->getidcategory()
         ]);
+
+        Category::updateFile();
     }
+
+    public static function updateFile()
+	{
+
+		$categories = Category::listAll();
+
+		$html = [];
+
+		foreach ($categories as $row) {
+            array_push($html, '<li datafilter= class="js-inview_h tra20">'.$row['descategory'].'</li>');
+		}
+
+		file_put_contents($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR . "portifolio-categories.html", implode('', $html));
+
+	}
 }
 
 ?>

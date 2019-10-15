@@ -1,6 +1,5 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    
+<div class="content-wrapper"> 
     <div class="content-header">
         <div class="container-fluid">
           <div class="row mb-2">
@@ -14,7 +13,7 @@
       <div class="row">
           <div class="col-md-12">
               <div class="box box-primary">
-            <div class="box-header with-border">
+            <div class="box-header with-border" style="margin-top: -20px;">
               <h3 class="box-title">Editar Usuário</h3>
             </div>
             <!-- /.box-header -->
@@ -37,6 +36,27 @@
                   <label for="desemail">E-mail</label>
                   <input type="email" class="form-control" id="desemail" name="desemail" placeholder="Digite o e-mail" value="<?php echo htmlspecialchars( $user["desemail"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                 </div>
+                <div class="form-group">
+                    <label for="slcFunction">Selecione a função</label>
+                    <select id="desfunction" name="desfunction" class="form-control">
+                      <option value="<?php echo htmlspecialchars( $user["desfunction"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $user["desfunction"], ENT_COMPAT, 'UTF-8', FALSE ); ?></option>
+                      <option value="Editor de Vídeo">Editor de Vídeo</option>
+                      <option value="Cinegrafista">Cinegrafista</option>
+                      <option value="Diretor Geral">Diretor Geral</option>
+                      <option value="Fotógrafo">Fotógrafo</option>
+                      <option value="Desenvolvedor Web">Desenvolvedor Web</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label for="lblPassword">Imagem de Perfil</label><br>
+                  <cite>Tamanho Recomendado: <strong>160x160</strong></cite>
+                  <input type="file" class="form-control-file" id="desphoto" name="desphoto">
+                  <div class="box box-widget">
+                    <div class="box-body">
+                      <img class="img-thumbnail" src="<?php echo htmlspecialchars( $user["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="image-preview" style="margin-top: 5px;">
+                    </div>
+                  </div>
+                </div> 
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" name="inadmin" value="1" <?php if( $user["inadmin"] == 1 ){ ?>checked<?php } ?>> Acesso de Administrador
@@ -45,7 +65,7 @@
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;">Salvar</button>
               </div>
             </form>
           </div>
@@ -56,3 +76,5 @@
     <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+    

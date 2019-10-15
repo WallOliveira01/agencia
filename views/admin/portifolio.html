@@ -1,0 +1,55 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Portfolio</h1>
+            <a class="btn btn-danger" href="/admin/new-portifolio">Adicionar Novo</a><br>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+              <div class="box box-primary">     
+                    <div class="box-body no-padding">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th style="width: 10px">#</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Categoria</th>
+                            <th style="width: 60px">Data de Publicação</th>
+                            <th style="width: 140px">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {loop="$posts"}
+                          <tr>
+                            <td>{$value.despost}</td>
+                            <td>{$value.authorpost}</td>
+                            <td>{$value.descategoria}</td>
+                            <td>{$value.datepost}</td>
+                            <td>
+                              <a href="/admin/users/{$value.iduser}" class="btn btn-primary btn-sm" style="margin-bottom: 5px;"><i class="fa fa-edit"></i> Editar</a>
+                              <a href="/admin/users/{$value.iduser}/delete" onclick="return confirm('Deseja realmente excluir este registro {$value.desperson}?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Excluir</a>
+                            </td>
+                          </tr>
+                          {/loop}
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+            </div>
+          </div>
+    </section>
+    <!-- /.content -->
+  </div>

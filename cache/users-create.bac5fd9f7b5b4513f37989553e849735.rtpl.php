@@ -3,7 +3,7 @@
 <!-- Main content -->
 <section class="content">
         <div class="card card-danger">
-            <form id="formNewUser"  role="form" action="/admin/users/create" method="post">
+            <form id="formNewUser"  role="form" action="/admin/users/create" method="post" enctype="multipart/form-data">
               <div class="card-body">
                 <div class="form-group">
                   <label for="lblEmail">Endereço de Email</label>
@@ -22,25 +22,41 @@
                   <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="Digite o telefone">
                 </div>
                 <div class="form-group">
+                    <label for="slcFunction">Selecione a função</label>
+                    <select id="desfunction" name="desfunction" class="form-control">
+                      <option selected>Escolha...</option>
+                      <option value="Editor de Vídeo">Editor de Vídeo</option>
+                      <option value="Cinegrafista">Cinegrafista</option>
+                      <option value="Diretor Geral">Diretor Geral</option>
+                      <option value="Fotógrafo">Fotógrafo</option>
+                      <option value="Desenvolvedor Web">Desenvolvedor Web</option>
+                    </select>
+                  </div>
+                <div class="form-group">
                   <label for="lblPassword">Senha</label>
                   <input type="password" class="form-control" id="despassword" name="despassword" placeholder="Senha" required minlength="8">
                 </div>
                 <div class="form-group">
-                    <label for="lblPassword">Imagem de Perfil</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    <span name="spanImageProfile"></span>
-                  </div>      
+                  <label for="lblPassword">Imagem de Perfil</label><br>
+                  <cite>Tamanho Recomendado: <strong>160x160</strong></cite>
+                  <input type="file" class="form-control-file" id="desphoto" name="desphoto">
+                  <div class="box box-widget">
+                    <div class="box-body">
+                      <img class="img-thumbnail" id="image-preview" style="margin-top: 5px;">
+                    </div>
+                  </div>
+                </div>    
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" name="inadmin" value="1">
                   <label class="form-check-label">Administrador</label>
                 </div>
               </div>
               <!-- /.card-body -->
-
               <div class="card-footer">
-                <button type="submit" class="btn btn-danger">Cadastrar</button>
+                <button type="submit" class="btn btn-danger" style="margin-bottom: 20px;">Cadastrar</button>
               </div>
             </form>
           </div>
       </section>
 </div>
+

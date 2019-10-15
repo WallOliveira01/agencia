@@ -7,7 +7,7 @@ use Rain\Tpl;
 class Mailer {
 	
 	const USERNAME = "contato.wallaceoliveira@outlook.com";
-	const PASSWORD = "<?password?>";
+	const PASSWORD = "20867222222abc";
 	const NAME_FROM = "Connect Films";
 
 	private $mail;
@@ -16,7 +16,7 @@ class Mailer {
 	{
 
 		$config = array(
-			"tpl_dir"       => $_SERVER['DOCUMENT_ROOT']."/views/email",
+			"tpl_dir"       => $_SERVER['DOCUMENT_ROOT']."/views/email/",
 		    "cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/cache/",
 		    "debug"         => false
 	    );
@@ -40,13 +40,13 @@ class Mailer {
 		// 0 = off (for production use)
 		// 1 = client messages
 		// 2 = client and server messages
-		$this->mail->SMTPDebug = 0;
+		$this->mail->SMTPDebug = 2;
 
 		//Ask for HTML-friendly debug output
 		$this->mail->Debugoutput = 'html';
 
 		//Set the hostname of the mail server
-		$this->mail->Host = 'smtp.outlook.com';
+		$this->mail->Host = 'smtp-mail.outlook.com';
 		// use
 		// $this->mail->Host = gethostbyname('smtp.gmail.com');
 		// if your network does not support SMTP over IPv6

@@ -35,6 +35,7 @@ class Model {
 			$this->{"set".$key}($value);
 
 		}
+		
 
 	}
 

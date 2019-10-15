@@ -29,17 +29,17 @@
             <div class="col-12">
                 <div class="row justify-content-between">
                     <div class="col-auto">
-                        <a class="navbar-brand" href="/index"><img src="../res/site/images/demo/logos/logo-slider-black.png" alt=""></a>
+                        <a class="navbar-brand" href="/"><img src="../res/site/images/demo/logos/logo-slider-black.png" alt=""></a>
                     </div>
                     <div class="col">
                         <ul class="navbar float-right">
-                            <li><a class="nav-link" href="/index">Home</a></li>
-                            <li><a class="nav-link " href="/sobre">Sobre</a></li>
-                            <li><a class="nav-link " href="/servicos">Serviços</a></li>
+                            <li><a class="nav-link" href="/">Home</a></li>
+                            <li><a class="nav-link " href="/about">Sobre</a></li>
+                            <li><a class="nav-link " href="/services">Serviços</a></li>
                             <li class="nav-item dropdown" ><a class="nav-link"  href="/portfolio" aria-haspopup="true" aria-expanded="false">Trabalhos</a>
                             </li>
-                            <li><a class="nav-link" href="time">Time</a></li>
-                            <li class=" active"><a class="nav-link" href="/contato">Contato</a></li>
+                            <li><a class="nav-link" href="/team">Time</a></li>
+                            <li class=" active"><a class="nav-link" href="/contact">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,11 +65,11 @@
                  <span class="icon-close"><img src="../res/site/images/close.png" alt="close"/></span>
                  <ul class="navbar-nav ml-auto">
                     <li><a class="nav-link active" href="/index">Home</a></li>
-                    <li><a class="nav-link " href="/sobre">Sobre</a></li>
-                    <li><a class="nav-link " href="/servicos">Serviços</a></li>
+                    <li><a class="nav-link " href="/about">Sobre</a></li>
+                    <li><a class="nav-link " href="/services">Serviços</a></li>
                     <li><a class="nav-link" href="/portfolio">Trabalhos</a></li>
-                    <li><a class="nav-link" href="/time">Time</a></li>
-                    <li><a class="nav-link" href="/contato">Contato</a></li>
+                    <li><a class="nav-link" href="/team">Time</a></li>
+                    <li><a class="nav-link" href="/contact">Contato</a></li>
                 </ul>
             </div>
             </div>
@@ -141,7 +141,7 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <div class="btns-box">
-                                <a href="/sobre" class="theme-btn btn-style-one">SAIBA MAIS</a>
+                                <a href="/about" class="theme-btn btn-style-one">SAIBA MAIS</a>
                             </div>
                         </div>
                         
@@ -223,7 +223,7 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
                             <div class="btns-box">
-                                <a href="/sobre" class="theme-btn btn-style-one">SAIBA MAIS</a>
+                                <a href="/about" class="theme-btn btn-style-one">SAIBA MAIS</a>
                             </div>
                         </div>
                         

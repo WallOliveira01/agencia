@@ -39,7 +39,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Site</a>
+        <a href="/" class="nav-link">Site</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contato</a>
@@ -121,21 +121,21 @@
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown user user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> 
-          <img src="../../res/admin/dist/img/lucas-160x160.jpg" class="user-image img-circle elevation-2" alt="User Image"> 
-          <span class="d-none d-md-block float-right" style="margin-left: 5px;">Lucas Varjão</span> </a>
+          <img src="<?php echo htmlspecialchars( $user["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="user-image img-circle elevation-2" alt="User Image"> 
+          <span class="d-none d-md-block float-right" style="margin-left: 5px;"><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></span> </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->
           <li class="user-header bg-danger">
-            <img src="../../res/admin/dist/img/lucas-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="<?php echo htmlspecialchars( $user["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-circle elevation-2" alt="User Image">
     
             <p>
-              Lucas Varjão
-              <small>Diretor Geral</small>
+              <?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
+              <small><?php echo htmlspecialchars( $user["desfunction"], ENT_COMPAT, 'UTF-8', FALSE ); ?></small>
             </p>
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-              <a href="#" class="btn btn-outline-danger">Perfil</a>
+              <a href="/admin/profile" class="btn btn-outline-danger">Perfil</a>
               <a href="/admin/logout" class="btn btn-outline-danger float-right">Sair</a>
           </li>
         </ul>
@@ -159,10 +159,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../res/admin/dist/img/lucas-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?php echo htmlspecialchars( $user["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/admin" class="d-block">Lucas Varjão</a>
+          <a href="/admin/profile" class="d-block"><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a>
         </div>
       </div>
 
@@ -195,7 +195,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/novo-post" class="nav-link">
+                    <a href="/admin/new-post" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Adicionar novo</p>
                     </a>
@@ -231,6 +231,35 @@
                 Serviços
               </p>
             </a>
+          </li>
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link">
+                <i class="fas fa-folder-open" style="margin-left: 4px;"></i>
+              <p style="margin-left: 12px;">
+                Portifolio
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/portifolio" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Todos os portifolios</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a href="/admin/portifolio/create" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Adicionar novo</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/categories" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Categorias</p>
+                    </a>
+                  </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="/admin/orcamentos" class="nav-link">
