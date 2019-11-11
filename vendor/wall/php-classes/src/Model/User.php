@@ -14,6 +14,8 @@ class User extends Model{
 	const ERROR = "UserError";
 	const ERROR_REGISTER = "UserErrorRegister";
 	const SUCCESS = "UserSucesss";
+
+	
 	
 	public static function getFromSession()
 	{
@@ -67,7 +69,7 @@ class User extends Model{
 	
 	public static function checkLogin($inadmin = true)
 	{
-
+		
 		if (
 			!isset($_SESSION[User::SESSION])
 			||
@@ -81,7 +83,6 @@ class User extends Model{
 		} else {
 
 			if ($inadmin === true && (bool)$_SESSION[User::SESSION]['inadmin'] === true) {
-
 				return true;
 
 			} else {
@@ -231,70 +232,6 @@ class User extends Model{
 	public function setPhoto($file)
 	{
 
-		$extension = explode('.', $file['name']);
-		$extension = end($extension);
-
-		switch ($extension) {
-
-			case "jpg":
-			case "jpeg":
-			$image = imagecreatefromjpeg($file["tmp_name"]);
-
-			$widthOriginal = imagesx($image);
-
-			$heigthOriginal = imagesy($image);
-
-			$width = 160;
-			$heigth = 160;
-
-			$newWidth = $width ? $width : floor(($widthOriginal / $heigthOriginal) * $heigth);
-
-			$newHeigth = $heigth ? $heigth : floor(($heigthOriginal / $widthOriginal) * $width);
-
-			$imagemresized = imagecreatetruecolor($newWidth, $newHeigth);
-
-			imagecopyresampled($imagemresized, $image, 0, 0, 0, 0, $newWidth, $newHeigth, $widthOriginal, $heigthOriginal);
-
-			break;
-
-			case "gif":
-			$image = imagecreatefromgif($file["tmp_name"]);
-			$widthOriginal = imagesx($image);
-
-			$heigthOriginal = imagesy($image);
-
-			$width = 160;
-			$heigth = 160;
-
-			$newWidth = $width ? $width : floor(($widthOriginal / $heigthOriginal) * $heigth);
-
-			$newHeigth = $heigth ? $heigth : floor(($heigthOriginal / $widthOriginal) * $width);
-
-			$imagemresized = imagecreatetruecolor($newWidth, $newHeigth);
-
-			imagecopyresampled($imagemresized, $image, 0, 0, 0, 0, $newWidth, $newHeigth, $widthOriginal, $heigthOriginal);
-			break;
-
-			case "png":
-			$image = imagecreatefrompng($file["tmp_name"]);
-			$widthOriginal = imagesx($image);
-
-			$heigthOriginal = imagesy($image);
-
-			$width = 160;
-			$heigth = 200;
-
-			$newWidth = $width ? $width : floor(($widthOriginal / $heigthOriginal) * $heigth);
-
-			$newHeigth = $heigth ? $heigth : floor(($heigthOriginal / $widthOriginal) * $width);
-
-			$imagemresized = imagecreatetruecolor($newWidth, $newHeigth);
-
-			imagecopyresampled($imagemresized, $image, 0, 0, 0, 0, $newWidth, $newHeigth, $widthOriginal, $heigthOriginal);
-			break;
-
-		}
-
 		$dist = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 
 			"res" . DIRECTORY_SEPARATOR . 
 			"admin" . DIRECTORY_SEPARATOR . 
@@ -302,10 +239,6 @@ class User extends Model{
 			"img" . DIRECTORY_SEPARATOR .
 			"user" . DIRECTORY_SEPARATOR .  
 			$this->getiduser() . ".jpg";
-
-		imagejpeg($imagemresized, $dist);
-
-		imagedestroy($imagemresized);
 
 		$this->checkPhoto();
 

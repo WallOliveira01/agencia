@@ -2,6 +2,7 @@
 
 use \Wall\PageAdmin;
 use \Wall\Model\Category;
+use \Wall\Model\User;
 
 $app->get("/admin/categories", function(){
 

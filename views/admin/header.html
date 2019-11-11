@@ -6,6 +6,8 @@
   <title>Produtora | Painel</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Customize Style -->
+  <link rel="stylesheet" href="../../res/admin/dist/css/style.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../res/admin/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -135,7 +137,7 @@
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-              <a href="/admin/profile" class="btn btn-outline-danger">Perfil</a>
+              <a href="/admin/profile/:iduser" class="btn btn-outline-danger">Perfil</a>
               <a href="/admin/logout" class="btn btn-outline-danger float-right">Sair</a>
           </li>
         </ul>
@@ -266,6 +268,14 @@
               <i class="fas fa-dollar-sign" style="margin-left: 4px;"></i>
               <p style="margin-left: 22px;">
                 Orçamentos
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/team" class="nav-link">
+              <i class="fas fa-user-friends" style="margin-right: -8px;"></i>
+              <p style="margin-left: 22px;">
+                Time
               </p>
             </a>
           </li>
