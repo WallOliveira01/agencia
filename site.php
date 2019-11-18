@@ -38,13 +38,10 @@ $app->get("/portfolio", function(){
 
 $app->get("/team", function(){
 
-	$users = User::listAll();
 
 	$page = new Page();
 
-	$page->setTpl("team", array(
-		"users"=>$users
-	));
+	$page->setTpl("team");
 
 });
 

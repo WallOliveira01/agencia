@@ -128,7 +128,7 @@
                 <div class="col-12">
                     <div class="grid-gallery-container">
                         <div  id="gll" class="grid-gallery columns-4">
-                            <div class="grid-item branding js-inview_h tra20 delay01"><img src="../res/site/images/demo/work/01.jpg" alt="">
+                            <div class="grid-item Institucional js-inview_h tra20 delay01"><img src="../res/site/images/demo/work/01.jpg" alt="">
                                 <div class="grid-item__rollover">
                                     <a href="single-project.html">
                                         <div class="containertext">

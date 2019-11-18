@@ -103,17 +103,21 @@ $app->post("/admin/team/:idemember", function($idmember){
 });
 
 
-$app->get("/admin/profile", function(){
+$app->get("/admin/profile/:iduser", function($iduser){
 
 	User::verifyLogin();
 
-	$users = User::listAll();
-
 	$page = new PageAdmin();
 
-	$page->setTpl("profile", array(
-		"users"=>$users
-	));
+	$page->setTpl("profile");
+
+});
+
+$app->post("/admin/profile/:iduser", function($iduser){
+
+	User::verifyLogin();
+
+
 
 });
 

@@ -1,1 +1,1 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><li class="js-inview_h tra20">Empresas</li><li class="js-inview_h tra20">Institucional</li><li class="js-inview_h tra20">Publicitário</li><li class="js-inview_h tra20">Comida</li><li class="js-inview_h tra20">Crianças</li>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><li data-filter=".Institucional "class="js-inview_h tra20">Institucional </li><li data-filter=".Infantil"class="js-inview_h tra20">Infantil</li><li data-filter=".Carros"class="js-inview_h tra20">Carros</li>

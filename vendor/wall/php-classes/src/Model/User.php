@@ -71,7 +71,7 @@ class User extends Model{
 	{
 		
 		if (
-			!isset($_SESSION[User::SESSION])
+			!isset($_SESSION[User::SESSION]) 
 			||
 			!$_SESSION[User::SESSION]
 			||
@@ -94,6 +94,7 @@ class User extends Model{
 		}
 
 	}
+	
 
     public static function verifyLogin($inadmin = true)
 	{

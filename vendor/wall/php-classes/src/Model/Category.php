@@ -61,7 +61,7 @@ class Category extends Model{
 		$html = [];
 
 		foreach ($categories as $row) {
-            array_push($html, '<li datafilter= class="js-inview_h tra20">'.$row['descategory'].'</li>');
+            array_push($html, '<li data-filter=".' . $row['descategory'] . '"' . 'class="js-inview_h tra20">'.$row['descategory'].'</li>');
 		}
 
 		file_put_contents($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR . "portifolio-categories.html", implode('', $html));

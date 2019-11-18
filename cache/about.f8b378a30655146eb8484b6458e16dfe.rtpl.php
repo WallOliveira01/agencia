@@ -123,7 +123,7 @@ mas como todos os elementos digitais da sua empresa funcionam juntos.</p>
 planos de crescimento, avaliamos os problemas digitais e colocamos em 
 coloque estratégias que levem ao sucesso comercial.</p>
                      
-                        <p><a class="btn btn-primary" href="#">Entre em contato</a></p>
+                        <p><a class="btn btn-primary" href="#section-contact">Entre em contato</a></p>
                          <div class="voffset-180"></div>
                     </div>
                 </div>
