@@ -94,19 +94,19 @@
                             </ul>
                           <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="margin-top: 15px; margin-left: 15px;">
+                              <?php $counter1=-1;  if( isset($categories) && ( is_array($categories) || $categories instanceof Traversable ) && sizeof($categories) ) foreach( $categories as $key1 => $value1 ){ $counter1++; ?>
+                                <input class="form-check-input"  type="checkbox" value="" id="defaultCheck1" style="margin-top: 15px; margin-left: 15px;">
                                 <label class="form-check-label" for="defaultCheck1" style="margin-top: 9px; margin-left: 30px;">
-                                    Jornalismo
-                                </label>
+                                    <?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                                </label></br>
+                              <?php } ?>
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
                             </div>
                         </div>
                         <!-- /.card-body -->
-                        <div class="card-footer">
-                          <a class="btn btn-danger float-right" href="#">Publicar</a>
-                        </div>
+
                         <!-- /.card-footer-->
                   </div>
                       <!-- /.card -->
@@ -128,10 +128,6 @@
                   <input type="file" class="form-control-file">
                 </div>
                 <!-- /.card-body -->
-                <div class="card-footer">
-                  <a class="btn btn-danger float-right" href="#">Publicar</a>
-                </div>
-                <!-- /.card-footer-->
                 </div>
                 <!-- /.card -->
             </div>

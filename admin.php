@@ -1,6 +1,7 @@
 <?php
 
 use \Wall\PageAdmin;
+use \Wall\Model\Category;
 use \Wall\Model\User;
 
 $app->get("/admin/posts", function(){
@@ -16,9 +17,13 @@ $app->get("/admin/new-post", function(){
 	
 	User::verifyLogin();
 
+	$categories = Category::listAll();
+
 	$page = new PageAdmin();
 
-	$page->setTpl("new-post");
+	$page->setTpl("new-post", [
+		'categories'=>$categories
+	]);
 });
 
 $app->get("/admin/new-portifolio", function(){
@@ -103,23 +108,68 @@ $app->post("/admin/team/:idemember", function($idmember){
 });
 
 
-$app->get("/admin/profile/:iduser", function($iduser){
+$app->get("/admin/profile", function(){
 
 	User::verifyLogin();
+
+	$user = User::getFromSession();
 
 	$page = new PageAdmin();
 
-	$page->setTpl("profile");
+	$page->setTpl("profile", [
+		'user'=>$user->getValues(),
+		'profileMsg'=>User::getSuccess(),
+		'profileError'=>User::getError()
+	]);
 
 });
 
-$app->post("/admin/profile/:iduser", function($iduser){
+$app->post("/admin/profile", function(){
 
 	User::verifyLogin();
 
+	if(!isset($_POST['desperson']) || $_POST['desperson'] === '')
+	{
+		User::setError("Preencha o seu nome.");
+		header('Location: /admin/profile');
+		exit;
+	}
 
+	if(!isset($_POST['desemail']) || $_POST['desemail'] === '')
+	{
+		User::setError("Preencha o seu email.");
+		header('Location: /admin/profile');
+		exit;
+	}
+
+	$user = User::getFromSession();
+	
+	if ($_POST['desemail'] !== $user->getdesemail())
+	{
+		if(User::checkLoginExists($_POST['desemail']) === true)
+		{
+			User::setError("Email já cadastrado");
+			header('Location: /admin/profile');
+			exit;
+		}
+	}
+
+	$_POST['inadmin'] = $user->getinadmin();
+	$_POST['despassword'] = $user->getdespassword();
+	
+
+	$user->setData($_POST);
+
+	$user->update();
+
+	User::setSuccess("Dados alterados com sucesso!");
+
+	header('Location: /admin/profile');
+	exit;
 
 });
+
+$app->get('')
 
 
 ?>

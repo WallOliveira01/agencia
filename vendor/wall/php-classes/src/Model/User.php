@@ -245,6 +245,29 @@ class User extends Model{
 
 	}	
 
+	public function updatePhoto($file)
+	{
+		if (file_exists(
+			$_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 
+			"res" . DIRECTORY_SEPARATOR . 
+			"admin" . DIRECTORY_SEPARATOR . 
+			"dist" . DIRECTORY_SEPARATOR . 
+			"img" . DIRECTORY_SEPARATOR .
+			"user" . DIRECTORY_SEPARATOR . 
+			$this->getiduser() . ".jpg"
+			)) {
+
+			$url = "/res/admin/dist/img/user/" . $this->getiduser() . ".jpg";
+
+		} else {
+
+			$url = "/res/admin/dist/img/user/" . $this->getiduser() . ".jpg";
+
+		}
+
+		return $this->setdesphoto($url);
+	}
+
 	public static function getForgot($email, $inadmin = true)
 	{
 		$sql = new Sql();
@@ -281,7 +304,7 @@ class User extends Model{
 					$link = "http://localhost/forgot/reset?code=$code";
 					
 				}				
-				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir senha da Hcode Store", "forgot", array(
+				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir senha da Connect Films", "forgot", array(
 					"name"=>$data['desperson'],
 					"link"=>$link
 				));				

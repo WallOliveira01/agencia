@@ -136,7 +136,7 @@ $app->post("/admin/users/create", function () {
 
  $user->save();
 
- $user->setPhoto($_FILES["desphoto"]);
+ $user->updatePhoto($_FILES["desphoto"]);
  
  header("Location: /admin/users");
  

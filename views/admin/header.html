@@ -137,7 +137,7 @@
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-              <a href="/admin/profile/:iduser" class="btn btn-outline-danger">Perfil</a>
+              <a href="/admin/profile" class="btn btn-outline-danger">Perfil</a>
               <a href="/admin/logout" class="btn btn-outline-danger float-right">Sair</a>
           </li>
         </ul>
